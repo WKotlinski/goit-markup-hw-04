@@ -390,9 +390,14 @@ footer .container {
   width: 40px;
   height: 40px;
 }
-.social-media-icons li:hover,
-.social-media-icons li:focus {
+footer .social-media-icons li:hover,
+footer .social-media-icons li:focus {
   background-color: var(--green);
+}
+
+.team-section .social-media-icons li:hover,
+.team-section .social-media-icons li:focus {
+  background-color: var(--ocean);
 }
 .social-media-icon-svg {
   /* outline: green 2px solid; */
