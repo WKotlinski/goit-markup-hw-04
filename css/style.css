@@ -190,7 +190,8 @@ nav a:hover {
   margin-top: 48px;
   padding: 16px 32px;
 }
-.hero-section button:hover {
+.hero-section button:hover,
+.hero-section button:focus {
   background-color: var(--ocean);
 }
 /* Sekcja głownego artykułu */
@@ -322,7 +323,8 @@ nav a:hover {
   fill: var(--light-slate);
 }
 
-.customers-section ul li:hover {
+.customers-section ul li:hover,
+.customers-section ul li:focus {
   border: var(--ocean) 1px solid;
   fill: var(--ocean);
 }
@@ -388,11 +390,9 @@ footer .container {
   width: 40px;
   height: 40px;
 }
-.social-media-icons li:hover {
+.social-media-icons li:hover,
+.social-media-icons li:focus {
   background-color: var(--green);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
 }
 .social-media-icon-svg {
   /* outline: green 2px solid; */
@@ -401,7 +401,8 @@ footer .container {
 
   height: 40px;
 }
-.filter-list-item button:hover {
+.filter-list-item button:hover,
+.filter-list-item button:focus {
   color: white;
   background-color: var(--ocean);
 }
