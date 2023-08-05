@@ -5,6 +5,8 @@
   --cloud: #f4f4fd;
   --cornflower: #e7e9fc;
   --ocean: #404bbf;
+  --grey: hsla(237, 18%, 22%, 0.7);
+  --light-slate: hsla(235, 5%, 58%, 1);
 }
 
 body {
@@ -25,6 +27,7 @@ html {
   width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
+  outline: red 2px dashed;
 }
 
 .section {
@@ -126,8 +129,6 @@ nav ul {
   letter-spacing: 0.32px;
 }
 
-.logo-header {
-}
 nav a {
   color: var(--slate);
   font-size: 16px;
@@ -153,6 +154,10 @@ nav a:hover {
 /* Hero section */
 .hero-section {
   background-color: var(--navy-blue);
+  background-image: url(../images/background.jpg);
+  box-shadow: inset 0 0 0 1000px var(--grey);
+  background-repeat: no-repeat;
+  background-position: center;
 
   padding: 188px 0;
   text-align: center;
@@ -191,6 +196,15 @@ nav a:hover {
 
 .main-article-list-item {
   width: 264px;
+}
+
+.main-article-svg {
+  background-color: var(--cloud);
+  width: 264px;
+  height: 112px;
+  padding: 24px 100px;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 .main-article h3 {
   font-size: 20px;
@@ -270,7 +284,40 @@ nav a:hover {
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
+
+.customers-section h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.customers-section {
+  display: flex;
+}
+
+.customers-section ul {
+  display: flex;
+
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-section ul li {
+  display: flex;
+  border: var(--light-slate) 1px solid;
+  border-radius: 4px;
+  width: 168px;
+  height: 88px;
+}
+
+.customers-section ul li:hover {
+}
 .footer-section {
+  display: flex;
   background-color: var(--navy-blue);
   padding: 100px 0;
 }
@@ -285,6 +332,17 @@ nav a:hover {
   margin-bottom: 16px;
 
   color: var(--cloud);
+}
+
+footer .container {
+  display: flex;
+}
+
+.footer-section h4 {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .footer-section p {
@@ -304,6 +362,17 @@ nav a:hover {
   letter-spacing: 0.64px;
   padding: 12px 24px;
 }
+/* Social media */
+.social-media-icons {
+  display: inline-flex;
+  gap: 16px;
+}
+
+.social-media-icons-list {
+  height: 40px;
+  width: 40px;
+  fill: var(--iris);
+}
 
 .filter-list-item button:hover {
   color: white;
@@ -316,7 +385,9 @@ nav a:hover {
   column-gap: 24px;
   row-gap: 48px;
 }
-
+.social-icon {
+  padding: 8px;
+}
 .filter-list {
   display: flex;
   justify-content: center;
