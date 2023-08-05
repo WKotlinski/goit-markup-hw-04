@@ -7,6 +7,7 @@
   --ocean: #404bbf;
   --grey: hsla(237, 18%, 22%, 0.7);
   --light-slate: hsla(235, 5%, 58%, 1);
+  --green: hsla(166, 63%, 50%, 1);
 }
 
 body {
@@ -27,7 +28,7 @@ html {
   width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
-  outline: red 2px dashed;
+  /* outline: red 2px dashed; */
 }
 
 .section {
@@ -154,8 +155,13 @@ nav a:hover {
 /* Hero section */
 .hero-section {
   background-color: var(--navy-blue);
-  background-image: url(../images/background.jpg);
-  box-shadow: inset 0 0 0 1000px var(--grey);
+  background-image: linear-gradient(
+      to bottom,
+      hsla(237, 18%, 22%, 0.7),
+      hsla(237, 18%, 22%, 0.7)
+    ),
+    url(../images/background.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
 
@@ -244,7 +250,6 @@ nav a:hover {
 .team-section {
   background-color: var(--cloud);
   margin: 0 auto;
-  /* text-align: center; */
 }
 .team-section ul {
   display: flex;
@@ -253,8 +258,9 @@ nav a:hover {
 
 .team-section li {
   background-color: white;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.16);
+  border-radius: 4px;
+  box-shadow: 0 2px 1px 0 hsla(237, 18%, 22%, 0.08),
+    0 1px 1px 0 hsla(237, 18%, 22%, 0.16);
 }
 .team-section h2 {
   font-size: 36px;
@@ -283,6 +289,7 @@ nav a:hover {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
+  margin-bottom: 8px;
 }
 
 .customers-section h2 {
@@ -312,9 +319,12 @@ nav a:hover {
   border-radius: 4px;
   width: 168px;
   height: 88px;
+  fill: var(--light-slate);
 }
 
 .customers-section ul li:hover {
+  border: var(--ocean) 1px solid;
+  fill: var(--ocean);
 }
 .footer-section {
   display: flex;
@@ -343,6 +353,7 @@ footer .container {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 16px;
 }
 
 .footer-section p {
@@ -363,17 +374,33 @@ footer .container {
   padding: 12px 24px;
 }
 /* Social media */
+.social-media-section {
+  margin-left: 120px;
+}
 .social-media-icons {
   display: inline-flex;
   gap: 16px;
 }
 
-.social-media-icons-list {
-  height: 40px;
+.social-media-icons li {
+  background-color: var(--iris);
+  border-radius: 50%;
   width: 40px;
-  fill: var(--iris);
+  height: 40px;
 }
+.social-media-icons li:hover {
+  background-color: var(--green);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.social-media-icon-svg {
+  /* outline: green 2px solid; */
+  padding: 8px;
+  width: 40px;
 
+  height: 40px;
+}
 .filter-list-item button:hover {
   color: white;
   background-color: var(--ocean);
@@ -385,9 +412,7 @@ footer .container {
   column-gap: 24px;
   row-gap: 48px;
 }
-.social-icon {
-  padding: 8px;
-}
+
 .filter-list {
   display: flex;
   justify-content: center;
@@ -409,6 +434,11 @@ footer .container {
 .photo-section {
   padding-top: 96px;
   padding-bottom: 120px;
+}
+
+.photo-section li:hover {
+  box-shadow: 0 2px 1px 0 hsla(237, 18%, 22%, 0.08),
+    0 1px 1px 0 hsla(237, 18%, 22%, 0.16);
 }
 .photo-section-discription {
   border-right: 1px var(--cornflower) solid;
