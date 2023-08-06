@@ -28,7 +28,6 @@ html {
   width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
-  /* outline: red 2px dashed; */
 }
 
 .section {
@@ -164,6 +163,10 @@ nav a:hover {
 
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+  max-height: 600px;
+  margin: 0 auto;
 
   padding: 188px 0;
   text-align: center;
@@ -206,10 +209,14 @@ nav a:hover {
 }
 
 .main-article-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* outline: red 2px dashed; */
   background-color: var(--cloud);
   width: 264px;
   height: 112px;
-  padding: 24px 100px;
+
   border-radius: 4px;
   margin-bottom: 8px;
 }
@@ -302,32 +309,21 @@ nav a:hover {
   text-transform: capitalize;
   margin-bottom: 72px;
 }
-
-.customers-section {
+.customers-list {
   display: flex;
-}
-
-.customers-section ul {
-  display: flex;
-
-  justify-content: center;
   gap: 24px;
 }
-
-.customers-section ul li {
+.customers-list-item {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: var(--light-slate) 1px solid;
   border-radius: 4px;
+  fill: var(--light-slate);
   width: 168px;
   height: 88px;
-  fill: var(--light-slate);
 }
 
-.customers-section ul li:hover,
-.customers-section ul li:focus {
-  border: var(--ocean) 1px solid;
-  fill: var(--ocean);
-}
 .footer-section {
   display: flex;
   background-color: var(--navy-blue);
@@ -389,6 +385,9 @@ footer .container {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .social-media-icons li:hover,
 footer .social-media-icons li:focus {
@@ -401,10 +400,9 @@ footer .social-media-icons li:focus {
 }
 .social-media-icon-svg {
   /* outline: green 2px solid; */
-  padding: 8px;
-  width: 40px;
 
-  height: 40px;
+  width: 16px;
+  height: 16px;
 }
 .filter-list-item button:hover,
 .filter-list-item button:focus {
@@ -453,3 +451,30 @@ footer .social-media-icons li:focus {
   padding: 32px 16px;
   background-color: white;
 }
+
+/* .customers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* 
+.customers-section ul {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.customers-section ul li {
+  display: flex;
+  border: var(--light-slate) 1px solid;
+  border-radius: 4px;
+  fill: var(--light-slate);
+  width: 104px;
+  height: 56px;
+} */
+/* 
+.customers-section ul li:hover,
+.customers-section ul li:focus {
+  border: var(--ocean) 1px solid;
+  fill: var(--ocean);
+} */
