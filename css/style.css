@@ -1,13 +1,17 @@
 :root {
-  --navy-blue: #2e2f42;
-  --iris: #4d5ae5;
-  --slate: #434455;
+  --navy-blue: hsl(237, 18%, 22%);
+  --iris: hsl(235, 75%, 60%);
+  --slate: hsl(237, 12%, 30%);
   --cloud: #f4f4fd;
-  --cornflower: #e7e9fc;
-  --ocean: #404bbf;
+  --cornflower: hsl(240, 69%, 97%);
+  --ocean: hsl(235, 50%, 50%);
   --grey: hsla(237, 18%, 22%, 0.7);
   --light-slate: hsla(235, 5%, 58%, 1);
   --green: hsla(166, 63%, 50%, 1);
+  --outline-1: red 2px dashed;
+  --outline-2: green 2px dashed;
+  --shadow-1: 0 2px 1px 0 hsla(237, 18%, 22%, 0.08);
+  --shadow-2: 0 1px 1px 0 hsla(237, 18%, 22%, 0.16);
 }
 
 body {
@@ -28,7 +32,7 @@ html {
   width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
-  /* outline: red 2px dashed; */
+  /* outline: var(--outline-1); */
 }
 
 .section {
@@ -168,7 +172,6 @@ nav a:hover {
   max-width: 1440px;
   max-height: 600px;
   margin: 0 auto;
-
   padding: 188px 0;
   text-align: center;
 }
@@ -180,7 +183,7 @@ nav a:hover {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 1.07;
   letter-spacing: 1.12px;
-  max-width: 492px;
+  max-width: 496px;
   margin: 0 auto;
 }
 
@@ -213,7 +216,6 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* outline: red 2px dashed; */
   background-color: var(--cloud);
   width: 264px;
   height: 112px;
@@ -285,6 +287,7 @@ nav a:hover {
   padding: 32px 16px;
   text-align: center;
   background-color: #ffffff;
+  border-radius: 4px;
 }
 .team-section h3 {
   font-size: 20px;
@@ -411,8 +414,6 @@ footer .social-media-icons li:focus {
   border-radius: 50%;
 }
 .social-media-icon-svg {
-  /* outline: green 2px solid; */
-
   width: 16px;
   height: 16px;
 }
@@ -424,8 +425,7 @@ footer .social-media-icon-svg {
 .filter-list-item button:focus {
   color: white;
   background-color: var(--ocean);
-  box-shadow: 0 2px 1px 0 hsla(237, 18%, 22%, 0.08),
-    0 1px 1px 0 hsla(237, 18%, 22%, 0.16);
+  box-shadow: var(--shadow-1), var(--shadow-2);
 }
 
 .photo-section ul:nth-child(3) {
@@ -452,8 +452,7 @@ footer .social-media-icon-svg {
 .portfolio-link:hover,
 .portfolio-link:focus {
   display: block;
-  box-shadow: 0 2px 1px 0 hsla(237, 18%, 22%, 0.08),
-    0 1px 1px 0 hsla(237, 18%, 22%, 0.16);
+  box-shadow: var(--shadow-1), var(--shadow-2);
 }
 .photo-section p {
   color: var(--slate);
@@ -470,24 +469,3 @@ footer .social-media-icon-svg {
   padding: 32px 16px;
   background-color: white;
 }
-
-/* .customers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-/* 
-.customers-section ul {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-}
-
-.customers-section ul li {
-  display: flex;
-  border: var(--light-slate) 1px solid;
-  border-radius: 4px;
-  fill: var(--light-slate);
-  width: 104px;
-  height: 56px;
-} */
