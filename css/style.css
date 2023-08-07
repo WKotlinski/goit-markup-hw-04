@@ -311,23 +311,30 @@ nav a:hover {
   margin-bottom: 72px;
 }
 
+.customers-list-link:hover,
+.customers-list-link:focus {
+  color: var(--ocean);
+  border-radius: 4px;
+}
+
 .customers-list {
   display: flex;
   gap: 24px;
 }
-.customers-list-item {
+.customers-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: var(--light-slate) 1px solid;
+  border: currentColor 1px solid;
   border-radius: 4px;
-  fill: var(--light-slate);
+  color: var(--light-slate);
   width: 168px;
   height: 88px;
 }
-
+.customers-svg {
+  fill: currentColor;
+}
 .footer-section {
-  display: flex;
   background-color: var(--navy-blue);
   padding: 100px 0;
 }
@@ -348,7 +355,7 @@ footer .container {
   display: flex;
 }
 
-.footer-section h4 {
+.social-header {
   color: white;
   font-weight: 500;
   font-size: 16px;
@@ -378,27 +385,30 @@ footer .container {
   margin-left: 120px;
 }
 .social-media-icons {
-  display: inline-flex;
+  display: flex;
   gap: 16px;
 }
 
-.social-media-icons li {
-  background-color: var(--iris);
-  border-radius: 50%;
+.social-media-icons a {
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.social-media-icons li {
+  background-color: var(--iris);
+  border-radius: 50%;
+}
 footer .social-media-icons li:hover,
 footer .social-media-icons li:focus {
   background-color: var(--green);
 }
 
-.team-section .social-media-icons li:hover,
-.team-section .social-media-icons li:focus {
+.team-section .social-media-icons a:hover,
+.team-section .social-media-icons a:focus {
   background-color: var(--ocean);
+  border-radius: 50%;
 }
 .social-media-icon-svg {
   /* outline: green 2px solid; */
@@ -406,10 +416,16 @@ footer .social-media-icons li:focus {
   width: 16px;
   height: 16px;
 }
+footer .social-media-icon-svg {
+  width: 24px;
+  height: 24px;
+}
 .filter-list-item button:hover,
 .filter-list-item button:focus {
   color: white;
   background-color: var(--ocean);
+  box-shadow: 0 2px 1px 0 hsla(237, 18%, 22%, 0.08),
+    0 1px 1px 0 hsla(237, 18%, 22%, 0.16);
 }
 
 .photo-section ul:nth-child(3) {
@@ -433,7 +449,12 @@ footer .social-media-icons li:focus {
   letter-spacing: 0.4px;
   margin-bottom: 8px;
 }
-
+.portfolio-link:hover,
+.portfolio-link:focus {
+  display: block;
+  box-shadow: 0 2px 1px 0 hsla(237, 18%, 22%, 0.08),
+    0 1px 1px 0 hsla(237, 18%, 22%, 0.16);
+}
 .photo-section p {
   color: var(--slate);
 }
@@ -442,10 +463,6 @@ footer .social-media-icons li:focus {
   padding-bottom: 120px;
 }
 
-.photo-section li:hover {
-  box-shadow: 0 2px 1px 0 hsla(237, 18%, 22%, 0.08),
-    0 1px 1px 0 hsla(237, 18%, 22%, 0.16);
-}
 .photo-section-discription {
   border-right: 1px var(--cornflower) solid;
   border-bottom: 1px var(--cornflower) solid;
@@ -474,9 +491,3 @@ footer .social-media-icons li:focus {
   width: 104px;
   height: 56px;
 } */
-
-.customers-section ul li:hover,
-.customers-section ul li:focus {
-  border: var(--ocean) 1px solid;
-  fill: var(--ocean);
-}
